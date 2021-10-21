@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/FarmaProm-book-app/static/css/main.480724a9.chunk.css",
-    "main.js": "/FarmaProm-book-app/static/js/main.b1d25441.chunk.js",
-    "main.js.map": "/FarmaProm-book-app/static/js/main.b1d25441.chunk.js.map",
+    "main.css": "/FarmaProm-book-app/static/css/main.b603775f.chunk.css",
+    "main.js": "/FarmaProm-book-app/static/js/main.943b7454.chunk.js",
+    "main.js.map": "/FarmaProm-book-app/static/js/main.943b7454.chunk.js.map",
     "runtime-main.js": "/FarmaProm-book-app/static/js/runtime-main.31ec73c2.js",
     "runtime-main.js.map": "/FarmaProm-book-app/static/js/runtime-main.31ec73c2.js.map",
-    "static/js/2.75091aaf.chunk.js": "/FarmaProm-book-app/static/js/2.75091aaf.chunk.js",
-    "static/js/2.75091aaf.chunk.js.map": "/FarmaProm-book-app/static/js/2.75091aaf.chunk.js.map",
+    "static/js/2.16c0146d.chunk.js": "/FarmaProm-book-app/static/js/2.16c0146d.chunk.js",
+    "static/js/2.16c0146d.chunk.js.map": "/FarmaProm-book-app/static/js/2.16c0146d.chunk.js.map",
     "index.html": "/FarmaProm-book-app/index.html",
-    "static/css/main.480724a9.chunk.css.map": "/FarmaProm-book-app/static/css/main.480724a9.chunk.css.map",
-    "static/js/2.75091aaf.chunk.js.LICENSE.txt": "/FarmaProm-book-app/static/js/2.75091aaf.chunk.js.LICENSE.txt",
+    "static/css/main.b603775f.chunk.css.map": "/FarmaProm-book-app/static/css/main.b603775f.chunk.css.map",
+    "static/js/2.16c0146d.chunk.js.LICENSE.txt": "/FarmaProm-book-app/static/js/2.16c0146d.chunk.js.LICENSE.txt",
     "static/media/logo_pl.5558c896.png": "/FarmaProm-book-app/static/media/logo_pl.5558c896.png"
   },
   "entrypoints": [
     "static/js/runtime-main.31ec73c2.js",
-    "static/js/2.75091aaf.chunk.js",
-    "static/css/main.480724a9.chunk.css",
-    "static/js/main.b1d25441.chunk.js"
+    "static/js/2.16c0146d.chunk.js",
+    "static/css/main.b603775f.chunk.css",
+    "static/js/main.943b7454.chunk.js"
   ]
 }
