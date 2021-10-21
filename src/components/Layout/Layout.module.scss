@@ -1,0 +1,21 @@
+@mixin flex-options {
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.book {
+  &-list {
+    margin-top: 3rem;
+    @include flex-options;
+  }
+
+  &-details {
+    margin-top: 2rem;
+    @include flex-options;
+  }
+}
