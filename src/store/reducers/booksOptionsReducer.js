@@ -32,9 +32,8 @@ export function booksOptionsReducer(state = defaultState, action) {
         : action.payload;
 
       const bookListAfterFilteringSameIds = [
-        ...new Map(books.map((item) => [item['id'], item])).values(),
-      ];
-
+        ...new Set(books.map((book) => book.id)),
+      ].map((id) => books.find((book) => book.id === id));
       return {
         ...state,
         bookList: bookListAfterFilteringSameIds,

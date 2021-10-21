@@ -1,7 +1,7 @@
-import axios from 'axios';
-import { bookListUrl, booksPerFetch } from '../../config/config';
+import axios from "axios";
+import { bookListUrl, booksPerFetch } from "../../config/config";
 
-const getBooksList = (genre = 'fiction', startIndex = 0) => {
+const getBooksList = (genre = "fiction", startIndex = 0) => {
   const bookstListLink = `${bookListUrl}${genre}&startIndex=${startIndex}&maxResults=${booksPerFetch}`;
 
   return axios.get(bookstListLink).then((res) => {

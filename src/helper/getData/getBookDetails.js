@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { bookDetailsUrl } from '../../config/config';
+import axios from "axios";
+import { bookDetailsUrl } from "../../config/config";
 
 const getBookDetails = (bookId) => {
   return axios

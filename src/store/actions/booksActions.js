@@ -1,11 +1,11 @@
-import getBooksList from '../../helper/getData/getBooksList';
+import getBooksList from "../../helper/getData/getBooksList";
 import {
   ADD_BOOKS_TO_BOOK_LIST,
   INCREMENT_START_INDEX,
   SET_LOADING_BOOKS_LIST_DATA_STATUS,
   SET_LOADING_BOOK_DETAILS_DATA_STATUS,
-} from './actionsType';
-import { setNotification } from './notificationActions';
+} from "./actionsType";
+import { setNotification } from "./notificationActions";
 
 export const getAndAddBooksToBookList =
   (genre, startIndex, booksPerFetch) => (dispatch) => {
@@ -16,8 +16,8 @@ export const getAndAddBooksToBookList =
         dispatch(
           setNotification({
             isActive: true,
-            status: 'success',
-            title: 'Book list fetched.',
+            status: "success",
+            title: "Book list fetched.",
           })
         );
         dispatch(setLoadingBooksListDataStatus(false));
@@ -27,8 +27,8 @@ export const getAndAddBooksToBookList =
         dispatch(
           setNotification({
             isActive: true,
-            status: 'error',
-            title: 'Problem with fetching book list.',
+            status: "error",
+            title: "Problem with fetching book list.",
           })
         );
         dispatch(setLoadingBooksListDataStatus(false));

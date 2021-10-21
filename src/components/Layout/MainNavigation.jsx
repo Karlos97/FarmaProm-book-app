@@ -3,11 +3,7 @@ import classes from './MainNavigation.module.scss';
 
 const MainNavigation = () => (
   <nav className={classes.nav}>
-    <ul>
-      <li>
-        <GoBackToBooksListButton />
-      </li>
-    </ul>
+    <GoBackToBooksListButton />
   </nav>
 );
 

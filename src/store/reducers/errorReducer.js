@@ -1,4 +1,4 @@
-import { SET_NOTIFICATION } from '../actions/actionsType';
+import { SET_NOTIFICATION } from "../actions/actionsType";
 
 export function notificationReducer(state = {}, action) {
   switch (action.type) {

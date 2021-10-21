@@ -1,14 +1,14 @@
-import classes from './BooksList.module.scss';
-import Book from './Book';
-import { Fragment } from 'react/cjs/react.production.min';
-import Spinner from '../UI/Spinner';
-import { useEffect } from 'react';
-import { getAndAddBooksToBookList } from '../../store/actions/booksActions';
-import { useDispatch, useSelector } from 'react-redux';
+import classes from "./BooksList.module.scss";
+import Book from "./Book";
+import { Fragment } from "react/cjs/react.production.min";
+import Spinner from "../UI/Spinner";
+import { useEffect } from "react";
+import { getAndAddBooksToBookList } from "../../store/actions/booksActions";
+import { useDispatch, useSelector } from "react-redux";
 import {
   selectShowBooksList,
   selectShowLoadingBookDetailsData,
-} from '../../store/selectors/selectors';
+} from "../../store/selectors/selectors";
 
 const BooksList = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const BooksList = () => {
 
   return (
     <Fragment>
-      <ul className={classes['books-list']}>
+      <ul className={classes["books-list"]}>
         {booksList?.map((book) => {
           return (
             <Book

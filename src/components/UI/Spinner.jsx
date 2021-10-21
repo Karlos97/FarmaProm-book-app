@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import MoonLoader from 'react-spinners/MoonLoader';
+import { css } from "@emotion/react";
+import MoonLoader from "react-spinners/MoonLoader";
 
 function Spinner({ loading }) {
   const override = css`

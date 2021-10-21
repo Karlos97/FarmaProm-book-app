@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import Spinner from '../UI/Spinner';
 import classes from './Book.module.scss';
 
@@ -18,6 +18,10 @@ const BookDetails = () => {
   const error = useSelector(
     ({ notification }) => notification.status !== 'error'
   );
+  const history = useHistory();
+  if (!error) {
+    history.goBack();
+  }
 
   const [bookData, setBookData] = useState({
     title: '',
@@ -49,13 +53,12 @@ const BookDetails = () => {
 
     getBookDetails(bookId)
       .then((book) => {
-        //TODO a co jesli bedzie sukces ale bez book? sprawdz czy taka sytuacja moze wystapic, ale warto sie zabezpieczyc
         setBookData(book);
         dispatch(
           setNotification({
             isActive: true,
             status: 'success',
-            title: 'Book list fetched.',
+            title: 'Book details fetched.',
           })
         );
         dispatch(setLoadingBookDetailsDataStatus(false));
@@ -65,7 +68,7 @@ const BookDetails = () => {
           setNotification({
             isActive: true,
             status: 'error',
-            title: 'Problem with fetching book list.',
+            title: 'Problem with fetching book details.',
           })
         );
         dispatch(setLoadingBookDetailsDataStatus(false));

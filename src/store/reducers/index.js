@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux';
-import { booksOptionsReducer } from './booksOptionsReducer';
-import { notificationReducer } from './errorReducer';
+import { combineReducers } from "redux";
+import { booksOptionsReducer } from "./booksOptionsReducer";
+import { notificationReducer } from "./errorReducer";
 
 export default combineReducers({
   booksOptions: booksOptionsReducer,
