@@ -5,7 +5,6 @@ import Header from './Header';
 import {
   getAndAddBooksToBookList,
   incrementStartIndex,
-  setLoadingBooksListDataStatus,
 } from '../../store/actions/booksActions';
 import MainNavigation from './MainNavigation';
 import classes from './Layout.module.scss';
@@ -39,7 +38,6 @@ const Layout = ({ children }) => {
         scrollTop + clientHeight >= scrollHeight - clientHeight / 4;
       if (pageAtTheBottom && isMainpage && !fetchingBooks) {
         setFetchingBooks(true);
-        dispatch(setLoadingBooksListDataStatus(true));
         dispatch(getAndAddBooksToBookList('fiction', startIndex));
         dispatch(incrementStartIndex());
 
