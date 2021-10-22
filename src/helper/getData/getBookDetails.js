@@ -1,13 +1,13 @@
-import axios from "axios";
-import { bookDetailsUrl } from "../../config/config";
+import axios from 'axios';
+import { bookDetailsUrl } from '../../config/config';
 
-const getBookDetails = (bookId) => {
-  return axios
+const getBookDetails = (bookId) =>
+  axios
     .get(bookDetailsUrl + bookId)
     .then((res) => res.data)
     .then((res) => {
       const authorsLayout = res.volumeInfo.authors?.reduce(
-        (prev, next) => `${prev}, ${next}`
+        (prev, next) => `${prev}, ${next}`,
       );
 
       const book = {
@@ -24,6 +24,5 @@ const getBookDetails = (bookId) => {
 
       return book;
     });
-};
 
 export default getBookDetails;

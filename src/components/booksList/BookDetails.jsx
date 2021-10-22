@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
 import Spinner from '../UI/Spinner';
 import classes from './Book.module.scss';
 
-import getBookDetails from './../../helper/getData/getBookDetails';
-import { useDispatch, useSelector } from 'react-redux';
+import getBookDetails from '../../helper/getData/getBookDetails';
 import { setLoadingBookDetailsDataStatus } from '../../store/actions/booksActions';
 import { setNotification } from '../../store/actions/notificationActions';
 
@@ -13,10 +13,10 @@ const BookDetails = () => {
   const params = useParams();
 
   const loadingBookDetailsData = useSelector(
-    ({ booksOptions }) => booksOptions?.loadingBookDetailsData
+    ({ booksOptions }) => booksOptions?.loadingBookDetailsData,
   );
   const error = useSelector(
-    ({ notification }) => notification.status !== 'error'
+    ({ notification }) => notification.status !== 'error',
   );
   const history = useHistory();
   if (!error) {
@@ -59,7 +59,7 @@ const BookDetails = () => {
             isActive: true,
             status: 'success',
             title: 'Book details fetched.',
-          })
+          }),
         );
         dispatch(setLoadingBookDetailsDataStatus(false));
       })
@@ -69,7 +69,7 @@ const BookDetails = () => {
             isActive: true,
             status: 'error',
             title: 'Problem with fetching book details.',
-          })
+          }),
         );
         dispatch(setLoadingBookDetailsDataStatus(false));
       });
@@ -80,16 +80,25 @@ const BookDetails = () => {
       <Spinner loading={loadingBookDetailsData} />
       {!loadingBookDetailsData && error && (
         <div className={classes.book}>
-          <img className={classes['book-image']} alt="Book" src={thumbnail} />
+          <img
+            className={classes['book-image']}
+            alt="Book"
+            src={thumbnail}
+          />
           <div className={classes['book-top']}>
-            <p className={classes['book-top-title-details']}>{title}</p>
+            <p className={classes['book-top-title-details']}>
+              {title}
+            </p>
             <p className={classes['book-top-subtitle']}>{subtitle}</p>
           </div>
           <h5 className={classes['book-authors']}>
             {`${authors} (${publishedDate})`}
           </h5>
           {typeof acsTokenLink === 'string' && publicDomain && (
-            <a href={acsTokenLink} className={classes['book-download']}>
+            <a
+              href={acsTokenLink}
+              className={classes['book-download']}
+            >
               DOWNLOAD BOOK
             </a>
           )}
@@ -102,12 +111,3 @@ const BookDetails = () => {
 };
 
 export default BookDetails;
-
-// * `volumeInfo.title`
-// * `volumeInfo.subtitle`
-// * `volumeInfo.authors[]`
-// * `volumeInfo.publishedDate`
-// * `volumeInfo.description`
-// * `volumeInfo.imageLinks.thumbnail`
-// * `volumeInfo.accessInfo.epub.acsTokenLink` (wyświetl link do pobrania jeśli `volumeInfo.accessInfo.epub.acsTokenLink`
-//   jest tekstem oraz `volumeInfo.accessInfo.publicDomain` równa się `true`)

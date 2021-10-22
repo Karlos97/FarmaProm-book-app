@@ -1,3 +1,4 @@
+import React from 'react';
 import GoBackToBooksListButton from '../UI/GoBackToBooksListButton';
 import classes from './MainNavigation.module.scss';
 

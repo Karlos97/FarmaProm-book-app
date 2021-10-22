@@ -1,11 +1,12 @@
-import { SET_NOTIFICATION } from "../actions/actionsType";
+import { SET_NOTIFICATION } from '../actions/actionsType';
 
-export function notificationReducer(state = {}, action) {
+const notificationReducer = (state = {}, action) => {
   switch (action.type) {
     case SET_NOTIFICATION:
-      state = action.payload;
-      return state;
+      return action.payload;
     default:
       return state;
   }
-}
+};
+
+export default notificationReducer;

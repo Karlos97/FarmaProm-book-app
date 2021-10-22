@@ -1,5 +1,10 @@
 import React from 'react';
-import { Route, Switch, Redirect, BrowserRouter } from 'react-router-dom';
+import {
+  Route,
+  Switch,
+  Redirect,
+  BrowserRouter,
+} from 'react-router-dom';
 import BooksList from './components/booksList/BooksList';
 import Layout from './components/Layout/Layout';
 import BookDetails from './components/booksList/BookDetails';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 import classes from './GoBackToBooksListButton.module.scss';

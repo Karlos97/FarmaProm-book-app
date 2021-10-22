@@ -1,6 +1,8 @@
-import { SET_NOTIFICATION } from "./actionsType";
+import { SET_NOTIFICATION } from './actionsType';
 
 export const setNotification = (payload) => ({
   type: SET_NOTIFICATION,
-  payload: payload,
+  payload,
 });
+
+export default setNotification;

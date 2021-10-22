@@ -1,22 +1,23 @@
-import { useDispatch } from "react-redux";
-import { delayForNotificationDismiss } from "../../config/config";
-import { setNotification } from "../../store/actions/notificationActions";
-import classes from "./Notification.module.scss";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { delayForNotificationDismiss } from '../../config/config';
+import { setNotification } from '../../store/actions/notificationActions';
+import classes from './Notification.module.scss';
 
 const Notification = ({ status, title, message }) => {
   const dispatch = useDispatch();
-  let specialClasses = "";
+  let specialClasses = '';
 
-  if (status === "error") {
+  if (status === 'error') {
     specialClasses = classes.error;
   }
-  if (status === "success") {
+  if (status === 'success') {
     specialClasses = classes.success;
     setTimeout(() => {
       dispatch(
         setNotification({
           isActive: false,
-        })
+        }),
       );
     }, delayForNotificationDismiss);
   }

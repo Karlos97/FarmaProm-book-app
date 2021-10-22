@@ -12,7 +12,7 @@ const defaultState = {
   loadingBookDetailsData: true,
 };
 
-export function booksOptionsReducer(state = defaultState, action) {
+const booksOptionsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case SET_LOADING_BOOKS_LIST_DATA_STATUS: {
       return {
@@ -40,13 +40,16 @@ export function booksOptionsReducer(state = defaultState, action) {
       };
     }
     case INCREMENT_START_INDEX: {
+      const startIndex = state.startIndex + state.booksPerFetch;
       return {
         ...state,
-        startIndex: (state.startIndex += state.booksPerFetch),
+        startIndex,
       };
     }
     default: {
       return state;
     }
   }
-}
+};
+
+export default booksOptionsReducer;
