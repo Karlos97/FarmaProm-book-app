@@ -8,7 +8,7 @@ const Header = () => (
     <div className={classes['app-header-block']}>
       <img
         src={FarmaPromLogo}
-        alt="Leocode logo"
+        alt="FarmaProm logo"
         className={classes['app-header-block-logo']}
       />
       <div className={classes['app-header-block-logo-name']}>
