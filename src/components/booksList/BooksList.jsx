@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Fragment } from 'react/cjs/react.production.min';
 import classes from './BooksList.module.scss';
-import Book from './Book';
-import Spinner from '../UI/Spinner';
+import Book from './Book/Book';
+import Spinner from '../UI/Spinner/Spinner';
 import { getAndAddBooksToBookList } from '../../store/actions/booksActions';
 import {
   selectShowBooksList,

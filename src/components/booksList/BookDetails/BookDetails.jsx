@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
-import Spinner from '../UI/Spinner';
-import classes from './Book.module.scss';
+import Spinner from '../../UI/Spinner/Spinner';
+import classes from '../Book/Book.module.scss';
 
-import getBookDetails from '../../helper/getData/getBookDetails';
-import { setLoadingBookDetailsDataStatus } from '../../store/actions/booksActions';
-import { setNotification } from '../../store/actions/notificationActions';
+import getBookDetails from '../../../helper/getData/getBookDetails';
+import { setLoadingBookDetailsDataStatus } from '../../../store/actions/booksActions';
+import { setNotification } from '../../../store/actions/notificationActions';
 
 const BookDetails = () => {
   const dispatch = useDispatch();

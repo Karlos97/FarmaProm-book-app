@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { delayForNotificationDismiss } from '../../config/config';
-import { setNotification } from '../../store/actions/notificationActions';
+import { delayForNotificationDismiss } from '../../../config/config';
+import { setNotification } from '../../../store/actions/notificationActions';
 import classes from './Notification.module.scss';
 
 const Notification = ({ status, title, message }) => {

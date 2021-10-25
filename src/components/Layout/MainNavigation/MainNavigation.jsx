@@ -1,5 +1,5 @@
 import React from 'react';
-import GoBackToBooksListButton from '../UI/GoBackToBooksListButton';
+import GoBackToBooksListButton from '../../UI/GoBackToBookList/GoBackToBooksListButton';
 import classes from './MainNavigation.module.scss';
 
 const MainNavigation = () => (

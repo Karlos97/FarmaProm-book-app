@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Header.module.scss';
-import FarmaPromLogo from '../../images/logo_pl.png';
+import FarmaPromLogo from '../../../images/logo_pl.png';
 
 const Header = () => (
   <header className={classes['app-header']}>

@@ -1,14 +1,14 @@
 import { useLocation } from 'react-router-dom';
 import React, { useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Header from './Header';
+import Header from './Header/Header';
 import {
   getAndAddBooksToBookList,
   incrementStartIndex,
 } from '../../store/actions/booksActions';
-import MainNavigation from './MainNavigation';
+import MainNavigation from './MainNavigation/MainNavigation';
 import classes from './Layout.module.scss';
-import Notification from '../UI/Notification';
+import Notification from '../UI/Notification/Notification';
 import { delayForNextFetechBookList } from '../../config/config';
 import {
   selectShowNotification,
